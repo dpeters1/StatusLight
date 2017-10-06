@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StatusLight</string>
+    <string name="service_label">lightNotificationService</string>
+</resources>

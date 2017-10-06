@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dompeters.statuslight.MainActivity">
+
+    <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+        android:id="@+id/ledModes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        app:textToggleCenter="ON"
+        app:textToggleLeft="OFF"
+        app:textToggleRight="BREATHE"
+        app:toggleWidth="100dp"
+        app:activeBgColor="@color/colorPrimary"
+        app:inactiveBgColor="@color/gray_very_light"
+        app:cornerRadius="20dp"/>
+
+    <SeekBar
+        android:id="@+id/brightnessSeekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ledModes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/throttle_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/throttle_thumb" />
+
+    <Button
+        android:id="@+id/notifAccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:text="Grant Notification Access"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/LightMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ledModes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Light Mode" />
+
+    <TextView
+        android:id="@+id/brightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brightnessSeekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Brightness" />
+
+    <EditText
+        android:id="@+id/ipAddr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notifAccess"
+        android:layout_alignStart="@+id/notifAccess"
+        android:layout_marginBottom="7dp"
+        android:cursorVisible="false"
+        android:ems="6"
+        android:inputType="textPersonName"
+        android:text="IP" />
+
+    <Button
+        android:id="@+id/ipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notifAccess"
+        android:layout_alignEnd="@+id/notifAccess"
+        android:layout_marginBottom="7dp"
+        android:text="OK" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ipButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:text="Settings" />
+
+
+</RelativeLayout>
